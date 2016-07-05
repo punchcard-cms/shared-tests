@@ -1,0 +1,63 @@
+{
+  "name": "punchcard-shared-tests",
+  "description": "Shared tests amongst Punchcard modules",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js lib && eslint -c ./.eslintrc-ava.yml tests",
+    "ava": "ava | tap-diff",
+    "nyc": "nyc --all npm run ava",
+    "pretest": "npm run lint",
+    "test": "npm run nyc",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/punchcard-cms/shared-tests.git"
+  },
+  "keywords": [
+    "punchcard-cms"
+  ],
+  "author": "Sam Richard <sam@snug.ug>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/punchcard-cms/shared-tests/issues"
+  },
+  "homepage": "https://github.com/punchcard-cms/shared-tests#readme",
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "coveralls": "^2.11.9",
+    "eslint": "^3.0.1",
+    "eslint-config-punchcard": "^1.0.1",
+    "ghooks": "^1.3.2",
+    "nyc": "^6.6.1",
+    "punchcard-commit-msg": "^1.0.0",
+    "punchcard-semantic-release": "^2.0.1",
+    "semantic-release": "^4.3.5",
+    "tap-diff": "^0.1.1"
+  },
+  "config": {
+    "ghooks": {
+      "commit-msg": "punchcard-commit-msg"
+    }
+  },
+  "release": {
+    "analyzeCommits": "punchcard-semantic-release/analyze",
+    "generateNotes": "punchcard-semantic-release/notes"
+  },
+  "nyc": {
+    "exclude": [
+      "tests/**/*"
+    ]
+  },
+  "ava": {
+    "files": [
+      "tests/**/*.js"
+    ],
+    "failFast": true,
+    "tap": true
+  },
+  "dependencies": {
+    "nunjucks": "^2.4.2"
+  }
+}
