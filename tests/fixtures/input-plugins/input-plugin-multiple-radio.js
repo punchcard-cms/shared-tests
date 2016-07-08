@@ -59,5 +59,5 @@ module.exports = {
       },
     },
   },
-  html: '{% for option in radioSelector.options %}<label for="{{radioSelector.id}}--{{option.index}}"><input type="{{radioSelector.type}}" name="{{radioSelector.name}}" id="{{radioSelector.id}}--{{option.index}}" value="{{option.value}}" {% if option.value == radioSelector.value %}checked{% endif %}>{{option.label}}</label>{% endfor %}{% for option in radioBots.options %}<label for="{{radioBots.id}}--{{option.index}}"><input type="{{radioBots.type}}" name="{{radioBots.name}}" id="{{radioBots.id}}--{{option.index}}" value="{{option.value}}" {% if option.value == radioBots.value %}checked{% endif %}>{{option.label}}</label>{% endfor %}',
+  html: '{% for option in radioSelector.options %}<label for="{{radioSelector.id}}--{{loop.index}}"><input type="{{radioSelector.type}}" name="{{radioSelector.name}}" id="{{radioSelector.id}}--{{loop.index}}" value="{{option.value}}" {% if option.value == radioSelector.value %}checked{% endif %}>{{option.label}}</label>{% endfor %}{% for option in radioBots.options %}<label for="{{radioBots.id}}--{{loop.index}}"><input type="{{radioBots.type}}" name="{{radioBots.name}}" id="{{radioBots.id}}--{{loop.index}}" value="{{option.value}}" {% if option.value == radioBots.value %}checked{% endif %}>{{option.label}}</label>{% endfor %}',
 };
