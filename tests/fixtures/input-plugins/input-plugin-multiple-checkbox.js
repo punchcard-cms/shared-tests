@@ -60,13 +60,13 @@ module.exports = {
     },
   },
   html: `{% if checkboxSelector.options.length > 1 %}<fieldset id="{{checkboxSelector.id}}"><legend>{{checkboxSelector.label}}</legend>{% endif %}
-    {% for option in checkboxSelector.options %}<label for="{{checkboxSelector.id}}--{{option.index}}">
-      <input type="{{checkboxSelector.type}}" name="{{checkboxSelector.name}}" id="{{checkboxSelector.id}}--{{option.index}}" value="{{option.value}}" {% if option.value == checkboxSelector.value %}checked{% endif %}>{{option.label}}</label>
+    {% for option in checkboxSelector.options %}<label for="{{checkboxSelector.id}}--{{loop.index}}">
+      <input type="{{checkboxSelector.type}}" name="{{checkboxSelector.name}}" id="{{checkboxSelector.id}}--{{loop.index}}" value="{{option.value}}" {% if option.value == checkboxSelector.value %}checked{% endif %}>{{option.label}}</label>
     {% endfor %}
     {% if checkboxSelector.options.length > 1 %}</fieldset>{% endif %}
     {% if checkboxSelecticon.options.length > 1 %}<fieldset id="{{checkboxSelecticon.id}}"><legend>{{checkboxSelecticon.label}}</legend>{% endif %}
-    {% for option in checkboxSelecticon.options %}<label for="{{checkboxSelecticon.id}}--{{option.index}}">
-      <input type="{{checkboxSelecticon.type}}" name="{{checkboxSelecticon.name}}" id="{{checkboxSelecticon.id}}--{{option.index}}" value="{{option.value}}" {% if option.value == checkboxSelecticon.value %}checked{% endif %}>{{option.label}}</label>
+    {% for option in checkboxSelecticon.options %}<label for="{{checkboxSelecticon.id}}--{{loop.index}}">
+      <input type="{{checkboxSelecticon.type}}" name="{{checkboxSelecticon.name}}" id="{{checkboxSelecticon.id}}--{{loop.index}}" value="{{option.value}}" {% if option.value == checkboxSelecticon.value %}checked{% endif %}>{{option.label}}</label>
     {% endfor %}
     {% if checkboxSelecticon.options.length > 1 %}</fieldset>{% endif %}`,
 };

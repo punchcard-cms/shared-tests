@@ -34,6 +34,6 @@ module.exports = {
     },
   },
   html: `{% if radioSelector.options.length > 1 %}<radiogroup>{% endif %}
-    {% for option in radioSelector.options %}<label for="{{radioSelector.id}}--{{option.index}}"><input type="{{radioSelector.type}}" name="{{radioSelector.name}}" id="{{radioSelector.id}}--{{option.index}}" value="{{option.value}}" {% if option.value == radioSelector.value %}checked{% endif %}>{{option.label}}</label>{% endfor %}
+    {% for option in radioSelector.options %}<label for="{{radioSelector.id}}--{{loop.index}}"><input type="{{radioSelector.type}}" name="{{radioSelector.name}}" id="{{radioSelector.id}}--{{loop.index}}" value="{{option.value}}" {% if option.value == radioSelector.value %}checked{% endif %}>{{option.label}}</label>{% endfor %}
     {% if radioSelector.options.length > 1 %}</radiogroup>{% endif %}`,
 };
