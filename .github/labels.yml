@@ -1,10 +1,10 @@
 section:
-  description: Section of Punchcard that this issue belongs to.
+  description: Section of Punchcard Shared Tests that this issue belongs to.
   color: '#c0e6ff'
   labels:
     - input plugins
 problem:
-  description: 'Issues that make Punchcard feel broken or prevent us from doing further work, but otherwise work as designed. High priority.'
+  description: 'Issues that make Punchcard Shared Tests feel broken or prevent us from doing further work, but otherwise work as designed. High priority.'
   color: '#ff5050'
   labels:
     - blocked
@@ -13,7 +13,7 @@ problem:
     - externally blocked
     - hotfix
 experience:
-  description: Issues that affect a user's comprehension or overall enjoyment of Punchcard.
+  description: Issues that affect a user's comprehension or overall enjoyment of Punchcard Shared Tests.
   color: '#ffa573'
   labels:
     - visual design
