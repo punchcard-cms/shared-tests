@@ -2,15 +2,7 @@ section:
   description: Section of Punchcard that this issue belongs to.
   color: '#c0e6ff'
   labels:
-    - user management
-    - content types
-    - workflows
-    - permissions
     - input plugins
-    - revisions
-    - api
-    - routing
-    - database
 problem:
   description: 'Issues that make Punchcard feel broken or prevent us from doing further work, but otherwise work as designed. High priority.'
   color: '#ff5050'
@@ -29,12 +21,6 @@ experience:
     - user experience
     - developer experience
     - performance
-environment:
-  description: 'Environment that the issue is present in, either Punchcard core or its use as a module'
-  color: '#e9e0e0'
-  labels:
-    - core
-    - module
 mindless:
   description: Issues that are necessary but less impactful for our users.
   color: '#ffd4a0'
@@ -82,7 +68,7 @@ inactive:
     - duplicate
     - on hold
 epic:
-  description: 'Epics track multiple stories together towards a desired outcome. Each epic should get a label unique to the core concept of the epic, usually 2-3 words. Epics should be labeled with their epic label and the `epic` label. Each story related to an epic should be labeled with that epic''s label.'
+  description: 'Epics track multiple stories together towards a desired outcome. '
   color: '#9855d4'
   labels:
     - epic
