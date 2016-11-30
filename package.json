@@ -60,6 +60,7 @@
     "tap": true
   },
   "dependencies": {
+    "lodash": "^4.17.2",
     "nunjucks": "^3.0.0"
   },
   "engines": {
