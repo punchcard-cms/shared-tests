@@ -1,5 +1,9 @@
 'use strict';
 
 const plugins = require('./lib/input-plugins');
+const fixtures = require('./tests/fixtures');
 
-module.exports.plugins = plugins;
+module.exports = {
+  fixtures,
+  plugins
+};
