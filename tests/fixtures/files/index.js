@@ -1,13 +1,11 @@
-'use strict';
-
 const _ = require('lodash');
 const path = require('path');
 const fs = require('fs');
 
 const all = [
-  path.join(__dirname, '..', 'all.js'),
-  path.join(__dirname, '..', 'input-plugin-tests.js'),
-  path.join(__dirname, '../../', 'index.js'),
+  path.join(__dirname, '../../', 'all.js'),
+  path.join(__dirname, '../../', 'input-plugin-tests.js'),
+  path.join(__dirname, '../../../', 'index.js'),
   path.join(__dirname, '../images', 'punchcard-image.svg'),
   path.join(__dirname, '../images', 'punchcard-404.svg'),
 ];
@@ -49,6 +47,4 @@ const raw = () => {
 };
 
 
-module.exports = {
-  raw,
-};
+module.exports = raw;
