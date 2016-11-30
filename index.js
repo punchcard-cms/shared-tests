@@ -5,5 +5,5 @@ const fixtures = require('./tests/fixtures');
 
 module.exports = {
   fixtures,
-  plugins
+  plugins,
 };
