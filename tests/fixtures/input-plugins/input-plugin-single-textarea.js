@@ -1,15 +1,15 @@
-const validation = require('./lib/validation.js');
+const utils = require('../_utils');
 
 module.exports = {
   name: 'Code Snippet',
   description: 'Add code snippet for your cool doohickey',
   validation: {
-    codeSnippetValidation: validation,
+    validation: utils.validation,
   },
   inputs: {
     codeSnippet: {
       validation: {
-        function: 'codeSnippetValidation',
+        function: 'validation',
         on: 'blur',
       },
       label: 'Code Snippet',

@@ -1,16 +1,15 @@
-const validation = require('./lib/validation.js');
+const utils = require('../_utils');
 
 module.exports = {
   name: 'Text Blocks',
   description: 'Add blocks of text that are very long',
   validation: {
-    codeSnippetValidation: validation,
-    haikuValidation: validation,
+    validation: utils.validation,
   },
   inputs: {
     codeSnippet: {
       validation: {
-        function: 'codeSnippetValidation',
+        function: 'validation',
         on: 'blur',
       },
       label: 'Code Snippet',
@@ -21,7 +20,7 @@ module.exports = {
     },
     haiku: {
       validation: {
-        function: 'haikuValidation',
+        function: 'validation',
         on: 'blur',
       },
       label: 'Haiku',

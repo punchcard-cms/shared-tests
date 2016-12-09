@@ -1,15 +1,15 @@
-const validation = require('./lib/validation.js');
+const utils = require('../_utils');
 
 module.exports = {
   name: 'Multiple Kitten Name Selector',
   description: 'Select a few kitten names',
   validation: {
-    kittenNameSelectorValidation: validation,
+    validation: utils.validation,
   },
   inputs: {
     kittenNameSelector: {
       validation: {
-        function: 'kittenNameSelectorValidation',
+        function: 'validation',
         on: 'blur',
       },
       label: 'Choose a kitten name',
