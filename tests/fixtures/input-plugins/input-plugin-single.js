@@ -1,15 +1,18 @@
-const validation = require('./lib/validation.js');
+const utils = require('../_utils');
 
 module.exports = {
   name: 'Email',
   description: 'Make sure email is good to go',
   validation: {
-    emailValidation: validation,
+    validation: utils.validation,
+  },
+  scripts: {
+    script: utils.script,
   },
   inputs: {
     email: {
       validation: {
-        function: 'emailValidation',
+        function: 'validation',
         on: 'blur',
       },
       label: 'Email',

@@ -1,16 +1,15 @@
-const validation = require('./lib/validation.js');
+const utils = require('../_utils');
 
 module.exports = {
   name: 'Radio Selector',
   description: 'Select a radio option',
   validation: {
-    radioValidation: validation,
-    botsValidation: validation,
+    validation: utils.validation,
   },
   inputs: {
     radioSelector: {
       validation: {
-        function: 'radioValidation',
+        function: 'validation',
         on: 'blur',
       },
       label: 'Select a radio',
@@ -35,7 +34,7 @@ module.exports = {
     },
     radioBots: {
       validation: {
-        function: 'botsValidation',
+        function: 'validation',
         on: 'blur',
       },
       label: 'Select a bot',

@@ -1,16 +1,15 @@
-const validation = require('./lib/validation.js');
+const utils = require('../_utils');
 
 module.exports = {
   name: 'Checkbox Selector',
   description: 'Select items',
   validation: {
-    checkboxValidation: validation,
-    selecticonValidation: validation,
+    validation: utils.validation,
   },
   inputs: {
     checkboxSelector: {
       validation: {
-        function: 'checkboxValidation',
+        function: 'validation',
         on: 'blur',
       },
       label: 'Select items',
@@ -35,7 +34,7 @@ module.exports = {
     },
     checkboxSelecticon: {
       validation: {
-        function: 'selecticonValidation',
+        function: 'validation',
         on: 'blur',
       },
       label: 'Select robots',

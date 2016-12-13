@@ -1,15 +1,15 @@
-const validation = require('./lib/validation.js');
+const utils = require('../_utils');
 
 module.exports = {
   name: 'Range Selector',
   description: 'Select a range',
   validation: {
-    rangeValidation: validation,
+    validation: utils.validation,
   },
   inputs: {
     rangeSelector: {
       validation: {
-        function: 'rangeValidation',
+        function: 'validation',
         on: 'blur',
       },
       label: 'Select a range',

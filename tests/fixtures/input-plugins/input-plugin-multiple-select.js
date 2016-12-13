@@ -1,16 +1,15 @@
-const validation = require('./lib/validation.js');
+const utils = require('../_utils');
 
 module.exports = {
   name: 'Kitten Name Selector',
   description: 'Select a kitten name',
   validation: {
-    kittenNameSelectorValidation: validation,
-    puppyNameSelectorValidation: validation,
+    validation: utils.validation,
   },
   inputs: {
     kittenNameSelector: {
       validation: {
-        function: 'kittenNameSelectorValidation',
+        function: 'validation',
         on: 'blur',
       },
       label: 'Choose a kitten name',
@@ -41,7 +40,7 @@ module.exports = {
     },
     puppyNameSelector1: {
       validation: {
-        function: 'puppyNameSelectorValidation',
+        function: 'validation',
         on: 'blur',
       },
       label: 'Choose a puppy name version 1',
@@ -72,7 +71,7 @@ module.exports = {
     },
     puppyNameSelector2: {
       validation: {
-        function: 'puppyNameSelectorValidation',
+        function: 'validation',
         on: 'blur',
       },
       label: 'Choose a puppy name version 2',
