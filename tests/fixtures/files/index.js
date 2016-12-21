@@ -26,8 +26,8 @@ const raw = () => {
     const type = path.extname(files[random]) === '.js' ? 'document/javascript' : 'image/svg';
 
     items.push({
-      fieldName: `file-upload--file-${counter}`,
-      originalFilename: path.basename(files[random]),
+      fieldname: `file-upload--file-${counter}`,
+      originalname: path.basename(files[random]),
       path: files[random],
       headers: {
         'content-disposition': `form-data; name="file-upload--file-${counter}"; filename="${path.basename(files[random])}"`,
@@ -35,7 +35,7 @@ const raw = () => {
       },
       size: fs.statSync(files[random]).size,
       name: path.basename(files[random]),
-      type,
+      mimetype: type,
     });
 
     files.splice(random, 1);
