@@ -31,7 +31,7 @@
     "eslint": "^4.1.0",
     "eslint-config-punchcard": "^1.0.1",
     "ghooks": "^2.0.0",
-    "nyc": "^10.0.0",
+    "nyc": "^11.0.2",
     "punchcard-commit-msg": "^1.0.0",
     "punchcard-semantic-release": "^2.0.1",
     "reparo": "^1.1.1-0",
