@@ -27,7 +27,7 @@
   "homepage": "https://github.com/punchcard-cms/shared-tests#readme",
   "devDependencies": {
     "ava": "^0.19.1",
-    "coveralls": "^2.11.9",
+    "coveralls": "^3.0.0",
     "eslint": "^3.0.1",
     "eslint-config-punchcard": "^1.0.1",
     "ghooks": "^2.0.0",
