@@ -28,7 +28,7 @@
   "devDependencies": {
     "ava": "^0.19.1",
     "coveralls": "^2.11.9",
-    "eslint": "^3.0.1",
+    "eslint": "^5.0.1",
     "eslint-config-punchcard": "^1.0.1",
     "ghooks": "^2.0.0",
     "nyc": "^11.0.2",
